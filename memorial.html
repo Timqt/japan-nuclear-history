@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪念馆 — 日本核战历史回顾</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav-logo">铭记历史</a>
+        <ul class="nav-links">
+            <li><a href="timeline.html">时间线</a></li>
+            <li><a href="bombs.html">原子弹</a></li>
+            <li><a href="impact.html">影响</a></li>
+            <li><a href="survivors.html">幸存者</a></li>
+            <li><a href="memorial.html" class="active">纪念馆</a></li>
+            <li><a href="gallery.html">画廊</a></li>
+            <li><a href="peace.html">和平</a></li>
+        </ul>
+        <div class="nav-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">首页</a>
+        <a href="timeline.html">时间线</a>
+        <a href="bombs.html">原子弹</a>
+        <a href="impact.html">影响</a>
+        <a href="survivors.html">幸存者</a>
+        <a href="memorial.html" class="active">纪念馆</a>
+        <a href="gallery.html">画廊</a>
+        <a href="peace.html">和平</a>
+    </div>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="page-tag">MEMORIAL</span>
+            <h1 class="page-title">核爆遗址与纪念馆</h1>
+            <p class="page-subtitle">这些地方，时刻提醒着我们铭记历史、追求和平</p>
+        </div>
+    </header>
+
+    <!-- 广岛和平纪念馆 -->
+    <section class="section section-alt" id="hiroshima">
+        <div class="container">
+            <div class="memorial-feature" data-aos="fade-up">
+                <div class="memorial-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hiroshima_Peace_Memorial_Museum.jpg/800px-Hiroshima_Peace_Memorial_Museum.jpg" alt="广岛和平纪念馆">
+                </div>
+                <div class="memorial-content">
+                    <span class="badge badge-red">UNESCO世界遗产</span>
+                    <h2>广岛和平纪念馆</h2>
+                    <p>广岛和平纪念馆(Hiroshima Peace Memorial Museum)位于广岛市中心，于1955年开放。这座纪念馆保存着核爆幸存者的证词、历史遗物和影像资料，向每一位来访者传递和平的重要性。</p>
+                    <ul class="feature-list">
+                        <li>展示核爆幸存者的证词和遗物</li>
+                        <li>保存大量历史照片和影像</li>
+                        <li>记录原子弹爆炸的完整经过</li>
+                        <li>每年吸引超过100万游客</li>
+                    </ul>
+                    <div class="memorial-info">
+                        <p><strong>地址：</strong>日本广岛县广岛市大手町1-2</p>
+                        <p><strong>开放时间：</strong>8:30-18:00（3-11月）/ 8:30-17:00（12-2月）</p>
+                        <p><strong>门票：</strong>成人200日元，学生100日元</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 长崎和平公园 -->
+    <section class="section" id="nagasaki">
+        <div class="container">
+            <div class="memorial-feature reverse" data-aos="fade-up">
+                <div class="memorial-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Nagasaki_Peace_Park.jpg/800px-Nagasaki_Peace_Park.jpg" alt="长崎和平公园">
+                </div>
+                <div class="memorial-content">
+                    <span class="badge badge-red">UNESCO世界遗产</span>
+                    <h2>长崎和平公园</h2>
+                    <p>长崎和平公园(Nagasaki Peace Park)位于长崎市中心，建造在原子弹爆心投影点上方。公园内有和平祈念像、和平泉和和平之鸽等纪念设施，每年8月9日都会举行盛大的和平纪念仪式。</p>
+                    <ul class="feature-list">
+                        <li>和平祈念像——象征"和平从祈祷中诞生"</li>
+                        <li>原子弹爆心投影点纪念碑</li>
+                        <li>"和平之泉"——纪念因缺水而死的幸存者</li>
+                        <li>各国赠送的和平雕像</li>
+                    </ul>
+                    <div class="memorial-info">
+                        <p><strong>地址：</strong>日本长崎县长崎市梅香町</p>
+                        <p><strong>主要活动：</strong>每年8月9日上午11:02举行和平纪念仪式</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 其他纪念设施 -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">其他纪念设施</h2>
+            </div>
+            <div class="card-grid card-grid-3">
+                <div class="card" data-aos="fade-up">
+                    <h3>和平纪念资料馆（广岛）</h3>
+                    <p>收藏约10,000件核爆遗物、照片和幸存者证词资料，是研究核爆历史的重要机构。</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>长崎原子弹资料馆</h3>
+                    <p>展示核爆对长崎的影响，以及幸存者长期承受的痛苦和对和平的追求。</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>国立广岛追悼原子弹死难者和平纪念馆</h3>
+                    <p>2019年开放的国立纪念馆，继续传承核爆记忆，推动和平教育。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">铭记历史 · 呼唤和平</div>
+            <div class="footer-nav">
+                <a href="index.html">首页</a>
+                <a href="timeline.html">时间线</a>
+                <a href="bombs.html">原子弹</a>
+                <a href="survivors.html">幸存者</a>
+                <a href="memorial.html">纪念馆</a>
+                <a href="gallery.html">画廊</a>
+                <a href="peace.html">和平</a>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .memorial-feature { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .memorial-feature.reverse { direction: rtl; }
+        .memorial-feature.reverse > * { direction: ltr; }
+        .memorial-image img { width: 100%; border-radius: 8px; filter: grayscale(60%); transition: filter 0.4s ease; }
+        .memorial-image img:hover { filter: grayscale(20%); }
+        .memorial-content h2 { font-family: 'Noto Serif SC', serif; font-size: 2rem; margin: 15px 0 20px; }
+        .memorial-content > p { color: var(--text-secondary); line-height: 1.9; margin-bottom: 25px; }
+        .memorial-info { margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.05); }
+        .memorial-info p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px; }
+        .memorial-info strong { color: var(--text-primary); }
+        @media (max-width: 768px) { .memorial-feature, .memorial-feature.reverse { grid-template-columns: 1fr; direction: ltr; } }
+    </style>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+        window.addEventListener('scroll', () => document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50));
+        function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('active'); }
+    </script>
+</body>
+</html>
