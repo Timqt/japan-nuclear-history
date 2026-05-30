@@ -6,101 +6,202 @@
     <title>铭记历史 · 呼唤和平 — 日本核战历史回顾</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav" id="navbar">
+        <a href="index.html" class="nav-logo">铭记历史</a>
+        <ul class="nav-links">
+            <li><a href="timeline.html">时间线</a></li>
+            <li><a href="bombs.html">原子弹</a></li>
+            <li><a href="impact.html">影响</a></li>
+            <li><a href="survivors.html">幸存者</a></li>
+            <li><a href="memorial.html">纪念馆</a></li>
+            <li><a href="gallery.html">画廊</a></li>
+            <li><a href="peace.html">和平</a></li>
+        </ul>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">首页</a>
+        <a href="timeline.html">时间线</a>
+        <a href="bombs.html">原子弹</a>
+        <a href="impact.html">影响</a>
+        <a href="survivors.html">幸存者</a>
+        <a href="memorial.html">纪念馆</a>
+        <a href="gallery.html">画廊</a>
+        <a href="peace.html">和平</a>
+    </div>
+
+    <!-- Hero区域 -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-content">
+            <p class="hero-subtitle">1945 — 永恒的警示</p>
+            <h1 class="hero-title">铭记历史<br><span class="highlight">呼唤和平</span></h1>
+            <p class="hero-desc">回顾日本广岛与长崎的核爆历史，见证人类历史上最黑暗的一刻。<br>愿每一次铭记，都能成为对和平的呼唤。</p>
+            <div class="hero-cta">
+                <a href="timeline.html" class="btn btn-primary">探索历史</a>
+                <a href="quiz.html" class="btn btn-secondary">知识测验</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- 快速导航 -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">探索历史</h2>
+                <p class="section-subtitle">点击下方卡片，深入了解核战历史的各个方面</p>
+            </div>
+            <div class="quick-nav">
+                <a href="timeline.html" class="quick-nav-item" data-aos="fade-up">
+                    <div class="quick-nav-icon">📅</div>
+                    <h3>历史时间线</h3>
+                    <p>从1945到2024，完整的历史年表</p>
+                </a>
+                <a href="bombs.html" class="quick-nav-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quick-nav-icon">💣</div>
+                    <h3>两颗原子弹</h3>
+                    <p>"小男孩"与"胖子"的详细档案</p>
+                </a>
+                <a href="survivors.html" class="quick-nav-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quick-nav-icon">👥</div>
+                    <h3>幸存者证词</h3>
+                    <p>被爆者的真实声音和故事</p>
+                </a>
+                <a href="memorial.html" class="quick-nav-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quick-nav-icon">🏛️</div>
+                    <h3>纪念馆</h3>
+                    <p>广岛和平纪念馆与长崎和平公园</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">触目惊心的数字</h2>
+                <p class="section-subtitle">每一个数字背后，都是真实的生命</p>
+            </div>
+            <div class="stats-row">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-number" data-count="140000">0</div>
+                    <div class="stat-label">广岛当日死亡</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="73000">0</div>
+                    <div class="stat-label">长崎当日死亡</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="390000">0</div>
+                    <div class="stat-label">累计死亡总数</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="2024">0</div>
+                    <div class="stat-label">诺贝尔和平奖年份</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核爆概述 -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">人类历史上的黑暗时刻</h2>
+                <p class="section-subtitle">1945年8月，美国向日本广岛和长崎投下两颗原子弹</p>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card" data-aos="fade-up">
+                    <div class="overview-date">1945.8.6</div>
+                    <h3>广岛原子弹</h3>
+                    <p>上午8时15分，美军B-29轰炸机"伊诺拉·盖伊"号在广岛相生桥上空投下代号"小男孩"的铀弹。这是人类历史上第一颗用于实战的原子弹。</p>
+                    <a href="bombs.html#hiroshima" class="overview-link">了解更多 →</a>
+                </div>
+                <div class="overview-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="overview-date">1945.8.9</div>
+                    <h3>长崎原子弹</h3>
+                    <p>上午11时02分，第二颗原子弹"胖子"在长崎上空爆炸。由于地形多山，损失略小于广岛，但爆炸当量更大。</p>
+                    <a href="bombs.html#nagasaki" class="overview-link">了解更多 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 幸存者证词 -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">被爆者的声音</h2>
+                <p class="section-subtitle">他们的经历，是核战争最真实的见证</p>
+            </div>
+            <div class="survivor-quotes">
+                <div class="survivor-quote-card" data-aos="fade-up">
+                    <p class="quote-text">"天空中突然出现一道令人眩晕的白光，紧接着是震耳欲聋的爆炸声。几秒钟内，整座城市化为火海。"</p>
+                    <div class="quote-author">— 谷口晔，长崎幸存者</div>
+                </div>
+                <div class="survivor-quote-card" data-aos="fade-up" data-aos-delay="100">
+                    <p class="quote-text">"作为孩子，我曾渴望复仇。但随着年龄增长，我明白了没有人应该承受这样的痛苦。"</p>
+                    <div class="quote-author">— 三牧俊之，Nihon Hidankyo联席总裁</div>
+                </div>
+            </div>
+            <div class="section-center">
+                <a href="survivors.html" class="btn btn-primary">阅读更多证词</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 和平呼吁 -->
+    <section class="section section-peace">
+        <div class="container">
+            <div class="peace-content" data-aos="fade-up">
+                <div class="badge badge-gold">🏅 诺贝尔和平奖 2024</div>
+                <h2 class="peace-title">日本原氢弹受害者团体协会</h2>
+                <p class="peace-text">2024年诺贝尔和平奖授予了为消除核武器奋斗了近70年的日本原子弹和氢弹受害者团体协会(Nihon Hidankyo)。他们的证词向世界展示了核武器的危害，推动了《禁止核武器条约》的通过。</p>
+                <a href="peace.html" class="btn btn-primary">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">铭记历史 · 呼唤和平</div>
+            <p class="footer-text">愿世界永远和平</p>
+            <div class="footer-dove">🕊️</div>
+            <div class="footer-nav">
+                <a href="index.html">首页</a>
+                <a href="timeline.html">时间线</a>
+                <a href="bombs.html">原子弹</a>
+                <a href="survivors.html">幸存者</a>
+                <a href="memorial.html">纪念馆</a>
+                <a href="gallery.html">画廊</a>
+                <a href="peace.html">和平</a>
+                <a href="quiz.html">测验</a>
+            </div>
+        </div>
+    </footer>
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        :root {
-            --bg-dark: #0a0a0a;
-            --bg-section: #111111;
-            --bg-card: #1a1a1a;
-            --text-primary: #e8e8e8;
-            --text-secondary: #a0a0a0;
-            --accent-red: #8b0000;
-            --accent-red-light: #cc0000;
-            --accent-blue: #4a90d9;
-            --accent-white: #f0f0f0;
-            --gradient-hero: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
-        }
-        
-        html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.8;
-            overflow-x: hidden;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(139, 0, 0, 0.3);
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        nav.scrolled {
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: 0 5px 30px rgba(0,0,0,0.5);
-        }
-        
-        .nav-logo {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: 2px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-red);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-links a:hover { color: var(--text-primary); }
-        .nav-links a:hover::after { width: 100%; }
-        
-        /* Hero Section */
-        .hero {
+        /* Hero区域样式 */
+        .hero-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-            background: var(--gradient-hero);
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);
         }
         
         .hero-bg {
@@ -112,15 +213,9 @@
             background: 
                 radial-gradient(ellipse at 20% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
                 radial-gradient(ellipse at 80% 50%, rgba(74, 144, 217, 0.1) 0%, transparent 50%);
-            z-index: 1;
         }
         
-        .hero-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-        }
+        .hero-particles { position: absolute; width: 100%; height: 100%; z-index: 2; }
         
         .particle {
             position: absolute;
@@ -152,8 +247,8 @@
             color: var(--accent-red);
             text-transform: uppercase;
             margin-bottom: 30px;
-            opacity: 0;
             animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0;
         }
         
         .hero-title {
@@ -164,16 +259,9 @@
             margin-bottom: 30px;
             opacity: 0;
             animation: fadeInUp 1s ease 0.6s forwards;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
-        .hero-title span {
-            color: var(--accent-red);
-            -webkit-text-fill-color: var(--accent-red);
-        }
+        .hero-title .highlight { color: var(--accent-red); }
         
         .hero-desc {
             font-size: 1.1rem;
@@ -190,39 +278,9 @@
             animation: fadeInUp 1s ease 1.2s forwards;
         }
         
-        .btn {
-            padding: 15px 40px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .btn-primary {
-            background: var(--accent-red);
-            color: white;
-            border-radius: 2px;
-        }
-        
-        .btn-primary:hover {
-            background: var(--accent-red-light);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid rgba(255,255,255,0.3);
-            border-radius: 2px;
-        }
-        
-        .btn-secondary:hover {
-            border-color: var(--text-primary);
-            background: rgba(255,255,255,0.05);
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .scroll-indicator {
@@ -262,1118 +320,182 @@
             100% { opacity: 0; top: 30px; }
         }
         
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        /* 快速导航 */
+        .quick-nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 120px 0;
-            position: relative;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-tag {
-            display: inline-block;
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            color: var(--accent-red);
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            padding: 8px 20px;
-            border: 1px solid rgba(139, 0, 0, 0.3);
-            border-radius: 2px;
-        }
-        
-        .section-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Timeline Section */
-        .timeline-section {
-            background: var(--bg-section);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--accent-red) 0%, rgba(139, 0, 0, 0.1) 100%);
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding: 40px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-            text-align: right;
-        }
-        
-        .timeline-item:nth-child(even) {
-            text-align: left;
-        }
-        
-        .timeline-content {
-            width: 45%;
-            padding: 30px;
+        .quick-nav-item {
+            display: block;
+            padding: 40px 25px;
             background: var(--bg-card);
             border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 4px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
             transition: all 0.4s ease;
-            position: relative;
         }
         
-        .timeline-content:hover {
+        .quick-nav-item:hover {
+            transform: translateY(-10px);
             border-color: rgba(139, 0, 0, 0.3);
-            transform: translateY(-5px);
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
         
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 16px;
-            height: 16px;
-            background: var(--accent-red);
-            border: 3px solid var(--bg-dark);
-            border-radius: 50%;
-            z-index: 1;
+        .quick-nav-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
         
-        .timeline-date {
-            font-size: 0.85rem;
-            color: var(--accent-red);
+        .quick-nav-item h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2rem;
             font-weight: 600;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        
-        .timeline-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .timeline-text {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        
-        /* Stats Section */
-        .stats-section {
-            background: linear-gradient(135deg, #0d0d0d 0%, #1a0a0a 50%, #0d0d0d 100%);
-            position: relative;
-        }
-        
-        .stats-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b0000' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        
-        .stat-card {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(26, 26, 26, 0.8);
-            border: 1px solid rgba(139, 0, 0, 0.2);
-            border-radius: 4px;
-            transition: all 0.4s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(139, 0, 0, 0.5);
-            box-shadow: 0 20px 50px rgba(139, 0, 0, 0.2);
-        }
-        
-        .stat-number {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent-red);
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            letter-spacing: 1px;
-        }
-        
-        /* Bomb Detail Section */
-        .bomb-section {
-            background: var(--bg-section);
-        }
-        
-        .bomb-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: stretch;
-        }
-        
-        .bomb-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-        
-        .bomb-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-        }
-        
-        .bomb-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(1.2);
-            transition: filter 0.4s ease;
-        }
-        
-        .bomb-card:hover .bomb-image {
-            filter: grayscale(50%) contrast(1.1);
-        }
-        
-        .bomb-content {
-            padding: 40px;
-        }
-        
-        .bomb-name {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 2rem;
-            font-weight: 700;
             margin-bottom: 10px;
             color: var(--text-primary);
         }
         
-        .bomb-name-en {
-            font-size: 0.85rem;
-            color: var(--accent-red);
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-        
-        .bomb-specs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding: 20px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 4px;
-        }
-        
-        .spec-item {
-            text-align: center;
-        }
-        
-        .spec-label {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        
-        .spec-value {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .bomb-desc {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-        
-        /* Survivors Section */
-        .survivors-section {
-            background: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-dark) 100%);
-        }
-        
-        .survivors-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .survivor-card {
-            background: var(--bg-card);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 8px;
-            padding: 40px;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .survivor-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-red) 0%, transparent 100%);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-        
-        .survivor-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .survivor-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-        }
-        
-        .survivor-quote {
-            font-size: 1.5rem;
-            color: var(--accent-red);
-            margin-bottom: 20px;
-            font-family: 'Noto Serif SC', serif;
-        }
-        
-        .survivor-text {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-        
-        .survivor-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .survivor-name {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-        
-        .survivor-detail {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        
-        /* Memorial Section */
-        .memorial-section {
-            background: var(--bg-section);
-        }
-        
-        .memorial-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-        
-        .memorial-card {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            aspect-ratio: 16/10;
-        }
-        
-        .memorial-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(80%);
-            transition: all 0.5s ease;
-        }
-        
-        .memorial-card:hover .memorial-img {
-            filter: grayscale(30%);
-            transform: scale(1.05);
-        }
-        
-        .memorial-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
-        }
-        
-        .memorial-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .memorial-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        
-        .memorial-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            background: var(--accent-red);
-            color: white;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            border-radius: 2px;
-            margin-bottom: 10px;
-        }
-        
-        /* Peace Section */
-        .peace-section {
-            background: linear-gradient(135deg, #0a0f1a 0%, #0d1525 50%, #0a0f1a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .peace-dove {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 400px;
-            height: 400px;
-            opacity: 0.05;
-            animation: gentleFloat 6s ease-in-out infinite;
-        }
-        
-        @keyframes gentleFloat {
-            0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-            50% { transform: translate(-50%, -50%) translateY(-20px); }
-        }
-        
-        .peace-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .peace-card {
-            background: rgba(74, 144, 217, 0.05);
-            border: 1px solid rgba(74, 144, 217, 0.2);
-            border-radius: 8px;
-            padding: 40px;
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-        
-        .peace-card:hover {
-            background: rgba(74, 144, 217, 0.1);
-            border-color: rgba(74, 144, 217, 0.4);
-            transform: translateY(-5px);
-        }
-        
-        .peace-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .peace-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .peace-text {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-        
-        /* Quote Section */
-        .quote-section {
-            background: var(--bg-section);
-            text-align: center;
-            padding: 100px 0;
-        }
-        
-        .quote-text {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 2rem;
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
-            color: var(--text-primary);
-        }
-        
-        .quote-author {
-            font-size: 1rem;
-            color: var(--accent-red);
-            letter-spacing: 2px;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--bg-dark);
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .footer-text {
-            color: var(--text-secondary);
+        .quick-nav-item p {
             font-size: 0.9rem;
-            margin-bottom: 30px;
+            color: var(--text-secondary);
         }
         
-        .footer-dove {
-            font-size: 2rem;
-            animation: gentleFloat 3s ease-in-out infinite;
-        }
+        @media (max-width: 1024px) { .quick-nav { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .quick-nav { grid-template-columns: 1fr; } }
         
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .nav-links { display: none; }
-            .hero-title { font-size: 2.5rem; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .bomb-grid { grid-template-columns: 1fr; }
-            .survivors-grid { grid-template-columns: 1fr 1fr; }
-            .memorial-grid { grid-template-columns: 1fr; }
-            .peace-grid { grid-template-columns: 1fr 1fr; }
-            .timeline::before { left: 20px; }
-            .timeline-item, .timeline-item:nth-child(odd) { 
-                flex-direction: column; 
-                text-align: left; 
-                padding-left: 50px;
-            }
-            .timeline-content { width: 100%; }
-            .timeline-dot { left: 20px; }
-        }
-        
-        @media (max-width: 768px) {
-            section { padding: 80px 0; }
-            .hero-title { font-size: 2rem; }
-            .section-title { font-size: 2rem; }
-            .stats-grid { grid-template-columns: 1fr; }
-            .survivors-grid { grid-template-columns: 1fr; }
-            .peace-grid { grid-template-columns: 1fr; }
-            .quote-text { font-size: 1.4rem; }
-            nav { padding: 15px 20px; }
-        }
-        
-        /* Image Placeholder with real links */
-        .img-mushroom { background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); }
-        .img-hiroshima { background: linear-gradient(135deg, #1a0a0a 0%, #0d0505 100%); }
-        .img-nagasaki { background: linear-gradient(135deg, #0a0a1a 0%, #050510 100%); }
-        
-        /* Gallery Section */
-        .gallery-section {
-            background: var(--bg-section);
-        }
-        
-        .gallery-grid {
+        /* 统计行 */
+        .stats-row {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
+            gap: 25px;
         }
         
-        .gallery-item {
-            aspect-ratio: 1;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
+        @media (max-width: 1024px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .stats-row { grid-template-columns: 1fr; } }
         
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: all 0.4s ease;
-        }
-        
-        .gallery-item:hover img {
-            filter: grayscale(30%);
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 15px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-        
-        .gallery-caption {
-            font-size: 0.8rem;
-            color: white;
-        }
-        
-        /* Impact Section */
-        .impact-section {
-            background: var(--bg-section);
-        }
-        
-        .impact-grid {
+        /* 概览网格 */
+        .overview-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
         
-        .impact-card {
+        .overview-card {
             background: var(--bg-card);
             border: 1px solid rgba(255,255,255,0.05);
             border-radius: 8px;
             padding: 40px;
-            position: relative;
-            overflow: hidden;
+            transition: all 0.4s ease;
         }
         
-        .impact-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--accent-red);
+        .overview-card:hover {
+            border-color: rgba(139, 0, 0, 0.3);
+            transform: translateY(-5px);
         }
         
-        .impact-title {
+        .overview-date {
+            font-size: 0.85rem;
+            color: var(--accent-red);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .overview-card h3 {
             font-family: 'Noto Serif SC', serif;
             font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .impact-list {
-            list-style: none;
-        }
-        
-        .impact-list li {
-            padding: 10px 0;
-            padding-left: 25px;
-            position: relative;
-            color: var(--text-secondary);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        
-        .impact-list li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: var(--accent-red);
-            border-radius: 50%;
-        }
-        
-        /* Nobel Section */
-        .nobel-section {
-            background: linear-gradient(135deg, #1a0a1a 0%, #0d0d0d 100%);
-        }
-        
-        .nobel-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .nobel-badge {
-            display: inline-block;
-            padding: 10px 30px;
-            background: linear-gradient(135deg, #c9a227 0%, #f4d03f 100%);
-            color: #1a1a1a;
             font-weight: 700;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            border-radius: 4px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         
-        .nobel-title {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .nobel-org {
-            font-size: 1.3rem;
-            color: var(--accent-red);
-            margin-bottom: 30px;
-        }
-        
-        .nobel-text {
+        .overview-card p {
             color: var(--text-secondary);
+            margin-bottom: 20px;
             line-height: 1.8;
-            text-align: left;
+        }
+        
+        .overview-link {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .overview-link:hover { color: var(--accent-red-light); }
+        
+        @media (max-width: 768px) { .overview-grid { grid-template-columns: 1fr; } }
+        
+        /* 幸存者引用 */
+        .survivor-quotes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .survivor-quote-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 35px;
+        }
+        
+        .quote-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .quote-author {
+            color: var(--accent-red);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) { .survivor-quotes { grid-template-columns: 1fr; } }
+        
+        .section-center { text-align: center; }
+        
+        /* 和平区域 */
+        .section-peace {
+            background: linear-gradient(135deg, #0a0f1a 0%, #0d1525 50%, #0a0f1a 100%);
+        }
+        
+        .peace-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .peace-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 25px 0;
+        }
+        
+        .peace-text {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-cta { flex-direction: column; gap: 15px; }
         }
     </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-logo">铭记历史</div>
-        <ul class="nav-links">
-            <li><a href="#timeline">时间线</a></li>
-            <li><a href="#bombs">原子弹</a></li>
-            <li><a href="#impact">影响</a></li>
-            <li><a href="#survivors">幸存者</a></li>
-            <li><a href="#memorial">纪念</a></li>
-            <li><a href="#peace">和平</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-particles" id="particles"></div>
-        <div class="hero-content">
-            <p class="hero-subtitle">1945 — 永恒的警示</p>
-            <h1 class="hero-title">铭记历史<br><span>呼唤和平</span></h1>
-            <p class="hero-desc">回顾日本广岛与长崎的核爆历史，见证人类历史上最黑暗的一刻。<br>愿每一次铭记，都能成为对和平的呼唤。</p>
-            <div class="hero-cta">
-                <a href="#timeline" class="btn btn-primary">探索历史</a>
-                <a href="#peace" class="btn btn-secondary">了解和平</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section class="timeline-section" id="timeline">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">历史年表</span>
-                <h2 class="section-title">核战历史时间线</h2>
-                <p class="section-subtitle">从1945年那个夏天开始，人类历史的轨迹被永远改变</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">1945年8月6日 上午8:15</span>
-                        <h3 class="timeline-title">广岛原子弹爆炸</h3>
-                        <p class="timeline-text">美军B-29轰炸机"伊诺拉·盖伊"号在广岛相生桥上空投下代号"小男孩"的铀弹。这是人类历史上第一次在战争中使用核武器，造成约7-8万人当场死亡。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">1945年8月9日 上午11:02</span>
-                        <h3 class="timeline-title">长崎原子弹爆炸</h3>
-                        <p class="timeline-text">第二颗原子弹"胖子"在长崎上空爆炸，造成约7万人死亡。由于地形多山，损失小于广岛，但爆炸当量更大。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">1945年8月15日</span>
-                        <h3 class="timeline-title">日本宣布投降</h3>
-                        <p class="timeline-text">裕仁天皇发表《终战诏书》，日本宣布无条件投降。第二次世界大战在这一刻正式结束。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">1956年</span>
-                        <h3 class="timeline-title">日本原氢弹受害者团体协会成立</h3>
-                        <p class="timeline-text">核爆幸存者组织"Nihon Hidankyo"成立，致力于为幸存者争取权益，推动核裁军运动。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">1967年</span>
-                        <h3 class="timeline-title">日本非核三原则</h3>
-                        <p class="timeline-text">日本政府宣布"不制造、不拥有、不运进核武器"三原则，但冷战期间美国仍在日本存储核武器。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2017年</span>
-                        <h3 class="timeline-title">联合国禁止核武器条约</h3>
-                        <p class="timeline-text">联合国通过《禁止核武器条约》，日本幸存者的证词在推动条约通过中发挥了重要作用。</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">2024年</span>
-                        <h3 class="timeline-title">诺贝尔和平奖</h3>
-                        <p class="timeline-text">日本原氢弹受害者团体协会(Nihon Hidankyo)获得诺贝尔和平奖，表彰其为消除核武器所做的努力。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section" id="stats">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">触目惊心</span>
-                <h2 class="section-title">核爆伤亡统计</h2>
-                <p class="section-subtitle">每一个数字背后，都是真实的生命和无法愈合的伤痛</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="stat-number" data-count="140000">0</div>
-                    <div class="stat-label">广岛当日死亡人数</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-number" data-count="73000">0</div>
-                    <div class="stat-label">长崎当日死亡人数</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-number" data-count="250000">0</div>
-                    <div class="stat-label">广岛累计死亡（含辐射）</div>
-                </div>
-                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-number" data-count="140000">0</div>
-                    <div class="stat-label">长崎累计死亡（含辐射）</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bomb Detail Section -->
-    <section class="bomb-section" id="bombs">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">武器档案</span>
-                <h2 class="section-title">两颗原子弹</h2>
-                <p class="section-subtitle">改变人类历史的两枚核弹</p>
-            </div>
-            <div class="bomb-grid">
-                <div class="bomb-card" data-aos="fade-up">
-                    <img class="bomb-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mushroom_Cloud_from_the_Nagasaki_Atomic_Bomb_-_Available_on_National_Archives_-_ARC_542786.jpg/800px-Mushroom_Cloud_from_the_Nagasaki_Atomic_Bomb_-_Available_on_National_Archives_-_ARC_542786.jpg" alt="广岛蘑菇云" onerror="this.parentElement.querySelector('.bomb-image').style.background='linear-gradient(135deg, #2a1a1a 0%, #1a0a0a 100%)'; this.parentElement.querySelector('.bomb-image').style.display='flex'; this.parentElement.querySelector('.bomb-image').style.alignItems='center'; this.parentElement.querySelector('.bomb-image').style.justifyContent='center'; this.outerHTML='<div class=bomb-image style=display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2a1a1a,#1a0a0a);color:var(--accent-red);font-size:4rem;>☢</div>'">
-                    <div class="bomb-content">
-                        <h3 class="bomb-name">小男孩</h3>
-                        <p class="bomb-name-en">Little Boy</p>
-                        <div class="bomb-specs">
-                            <div class="spec-item">
-                                <div class="spec-label">类型</div>
-                                <div class="spec-value">铀弹</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">当量</div>
-                                <div class="spec-value">15,000吨TNT</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">重量</div>
-                                <div class="spec-value">4,400公斤</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">爆高</div>
-                                <div class="spec-value">580米</div>
-                            </div>
-                        </div>
-                        <p class="bomb-desc">1945年8月6日，美军保罗·蒂贝茨上校驾驶B-29轰炸机"伊诺拉·盖伊"号在广岛相生桥上空投下人类历史上第一颗用于实战的原子弹。爆炸产生的温度高达6,000摄氏度，冲击波以440米/秒的速度席卷全城。</p>
-                    </div>
-                </div>
-                <div class="bomb-card" data-aos="fade-up" data-aos-delay="200">
-                    <img class="bomb-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Atomic_bombing_of_Japan.jpg/800px-Atomic_bombing_of_Japan.jpg" alt="长崎爆炸" onerror="this.parentElement.querySelector('.bomb-image').style.background='linear-gradient(135deg, #1a1a2a 0%, #0a0a1a 100%)'; this.parentElement.querySelector('.bomb-image').style.display='flex'; this.parentElement.querySelector('.bomb-image').style.alignItems='center'; this.parentElement.querySelector('.bomb-image').style.justifyContent='center'; this.outerHTML='<div class=bomb-image style=display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1a1a2a,#0a0a1a);color:var(--accent-red);font-size:4rem;>☢</div>'">
-                    <div class="bomb-content">
-                        <h3 class="bomb-name">胖子</h3>
-                        <p class="bomb-name-en">Fat Man</p>
-                        <div class="bomb-specs">
-                            <div class="spec-item">
-                                <div class="spec-label">类型</div>
-                                <div class="spec-value">钚弹</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">当量</div>
-                                <div class="spec-value">21,000吨TNT</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">重量</div>
-                                <div class="spec-value">4,670公斤</div>
-                            </div>
-                            <div class="spec-item">
-                                <div class="spec-label">爆高</div>
-                                <div class="spec-value">503米</div>
-                            </div>
-                        </div>
-                        <p class="bomb-desc">1945年8月9日，第二颗原子弹在长崎上空爆炸。原定目标是小仓，但由于天气恶劣，临时改为长崎。三菱重工长崎造船厂附近成为爆心投影点。由于长崎三面环山的地形，部分阻挡了冲击波。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="impact-section" id="impact">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">深远影响</span>
-                <h2 class="section-title">核爆的多重影响</h2>
-                <p class="section-subtitle">不仅仅是当天的伤亡，更是延续至今的痛苦</p>
-            </div>
-            <div class="impact-grid">
-                <div class="impact-card" data-aos="fade-up">
-                    <h3 class="impact-title">⚡ 短期影响</h3>
-                    <ul class="impact-list">
-                        <li>城市中心12平方公里被夷为平地</li>
-                        <li>约4.8万幢建筑物全毁，2.2万幢半毁</li>
-                        <li>数千人因高温瞬间气化</li>
-                        <li>无数人因冲击波和火灾死亡</li>
-                        <li>幸存者遭受严重烧伤和辐射灼伤</li>
-                    </ul>
-                </div>
-                <div class="impact-card" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="impact-title">☢️ 长期影响</h3>
-                    <ul class="impact-list">
-                        <li>辐射病、白血病、癌症发病率大幅上升</li>
-                        <li>幸存者后代出现遗传疾病</li>
-                        <li>心理创伤持续数代人</li>
-                        <li>辐射残留影响持续数十年</li>
-                        <li>新生儿畸形率增加</li>
-                    </ul>
-                </div>
-                <div class="impact-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="impact-title">🏙️ 社会影响</h3>
-                    <ul class="impact-list">
-                        <li>战后重建耗费数十年</li>
-                        <li>幸存者面临社会歧视和偏见</li>
-                        <li>"被爆者"标签带来的社会压力</li>
-                        <li>医疗负担持续增加</li>
-                        <li>和平运动在全球兴起</li>
-                    </ul>
-                </div>
-                <div class="impact-card" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="impact-title">🌍 国际影响</h3>
-                    <ul class="impact-list">
-                        <li>冷战格局加速形成</li>
-                        <li>核军备竞赛由此开始</li>
-                        <li>《核不扩散条约》(1968)诞生</li>
-                        <li>核裁军运动全球化</li>
-                        <li>人类首次认识核武器的毁灭性</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Survivors Section -->
-    <section class="survivors-section" id="survivors">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">被爆者的声音</span>
-                <h2 class="section-title">幸存者的证词</h2>
-                <p class="section-subtitle">他们的经历，是核战争最真实的见证</p>
-            </div>
-            <div class="survivors-grid">
-                <div class="survivor-card" data-aos="fade-up">
-                    <div class="survivor-quote">"</div>
-                    <p class="survivor-text">天空中突然出现一道令人眩晕的白光，紧接着是震耳欲聋的爆炸声。我被冲击波掀翻，热浪灼烧着我的身体。几秒钟内，整座城市化为火海。</p>
-                    <div class="survivor-info">
-                        <div>
-                            <div class="survivor-name">谷口晔</div>
-                            <div class="survivor-detail">长崎幸存者，爆炸时距离爆心仅1.6公里</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="survivor-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="survivor-quote">"</div>
-                    <p class="survivor-text">我亲眼看见蘑菇云冲破云层，黑色的"黑雨"从天而降。我们走在满是尸体的街道上，空气里弥漫着焦糊的气味。这是我一生都无法抹去的噩梦。</p>
-                    <div class="survivor-info">
-                        <div>
-                            <div class="survivor-name">山口疆</div>
-                            <div class="survivor-detail">人类历史上唯一两次核爆的双重幸存者</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="survivor-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="survivor-quote">"</div>
-                    <p class="survivor-text">作为孩子，我曾渴望复仇。但随着年龄增长，我明白了没有人应该承受这样的痛苦。核武器不仅摧毁了我们的身体，更是永远摧毁了无数人的未来。</p>
-                    <div class="survivor-info">
-                        <div>
-                            <div class="survivor-name">三牧俊之</div>
-                            <div class="survivor-detail">Nihon Hidankyo联席总裁，1945年广岛原子弹爆炸时仅3岁</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Nobel Section -->
-    <section class="nobel-section" id="nobel">
-        <div class="container">
-            <div class="nobel-content" data-aos="fade-up">
-                <div class="nobel-badge">🏅 诺贝尔和平奖 2024</div>
-                <h2 class="nobel-title">日本原氢弹受害者团体协会</h2>
-                <p class="nobel-org">Nihon Hidankyo</p>
-                <p class="nobel-text">2024年诺贝尔和平奖授予了日本原子弹和氢弹受害者团体协会（Nihon Hidankyo），表彰其"为建立核禁止做出了巨大贡献"。这个由核爆幸存者组成的组织自1956年成立以来，一直致力于通过证人证词确保核武器永远不会再次使用。他们的工作对2017年联合国《禁止核武器条约》的通过起到了关键作用。<br><br>诺贝尔奖委员会主席弗莱德内斯表示："他们的证词向世界展示了核武器造成的残酷破坏和痛苦。尽管幸存者的数量逐年减少，但他们的工作——利用其昂贵经历培养和平的希望和行动——仍在激励着全球反核运动。"</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Memorial Section -->
-    <section class="memorial-section" id="memorial">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">永恒纪念</span>
-                <h2 class="section-title">核爆遗址与纪念馆</h2>
-                <p class="section-subtitle">这些地方，时刻提醒着我们铭记历史</p>
-            </div>
-            <div class="memorial-grid">
-                <div class="memorial-card" data-aos="fade-up">
-                    <img class="memorial-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hiroshima_Peace_Memorial_Museum.jpg/800px-Hiroshima_Peace_Memorial_Museum.jpg" alt="广岛和平纪念馆" onerror="this.style.display='none'">
-                    <div class="memorial-overlay">
-                        <span class="memorial-badge">UNESCO世界遗产</span>
-                        <h3 class="memorial-title">广岛和平纪念资料馆</h3>
-                        <p class="memorial-desc">保存着核爆幸存者的证词、遗物和历史资料，向世界传递和平的重要性</p>
-                    </div>
-                </div>
-                <div class="memorial-card" data-aos="fade-up" data-aos-delay="100">
-                    <img class="memorial-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Nagasaki_Peace_Park.jpg/800px-Nagasaki_Peace_Park.jpg" alt="长崎和平公园" onerror="this.style.display='none'">
-                    <div class="memorial-overlay">
-                        <span class="memorial-badge">UNESCO世界遗产</span>
-                        <h3 class="memorial-title">长崎和平公园</h3>
-                        <p class="memorial-desc">位于爆心投影点上方，建有和平祈念像，每年8月9日举行和平纪念仪式</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Peace Section -->
-    <section class="peace-section" id="peace">
-        <svg class="peace-dove" viewBox="0 0 100 100" fill="currentColor">
-            <path d="M50 10 C30 10 20 30 25 50 C20 45 10 50 10 60 C10 75 30 80 40 75 C35 80 30 90 50 90 C70 90 65 80 60 75 C70 80 90 75 90 60 C90 50 80 45 75 50 C80 30 70 10 50 10" fill="rgba(74, 144, 217, 0.3)"/>
-            <circle cx="35" cy="35" r="3" fill="rgba(74, 144, 217, 0.5)"/>
-        </svg>
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">呼唤和平</span>
-                <h2 class="section-title">核裁军与和平</h2>
-                <p class="section-subtitle">从历史的悲剧中，我们学到了什么？</p>
-            </div>
-            <div class="peace-grid">
-                <div class="peace-card" data-aos="fade-up">
-                    <div class="peace-icon">🌍</div>
-                    <h3 class="peace-title">全球核裁军</h3>
-                    <p class="peace-text">目前全球仍有超过12,000枚核武器存在。Nihon Hidankyo的努力证明了普通人可以通过坚持不懈的声音改变世界。</p>
-                </div>
-                <div class="peace-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="peace-icon">🤝</div>
-                    <h3 class="peace-title">国际合作</h3>
-                    <p class="peace-text">《禁止核武器条约》(TPNW)于2017年通过，但九个核武国家尚未签署。日本作为唯一核爆受害国，立场备受关注。</p>
-                </div>
-                <div class="peace-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="peace-icon">📚</div>
-                    <h3 class="peace-title">教育传承</h3>
-                    <p class="peace-text">幸存者的平均年龄已超过83岁。将他们的证词传递给年轻一代，是避免历史悲剧重演的关键。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quote Section -->
-    <section class="quote-section">
-        <div class="container" data-aos="fade-up">
-            <p class="quote-text">"核武器的威胁并非只存在于过去——它仍然是对人类未来的最大威胁之一。我们必须记住广岛和长崎的教训，确保这样的悲剧永远不会重演。"</p>
-            <p class="quote-author">—— 联合国秘书长安东尼奥·古特雷斯</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-logo">铭记历史 · 呼唤和平</div>
-            <p class="footer-text">愿世界永远和平</p>
-            <div class="footer-dove">🕊️</div>
-        </div>
-    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out-cubic',
-            once: true,
-            offset: 100
-        });
-
-        // Create particles
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 100 });
+        
+        // 创建粒子
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 50; i++) {
             const particle = document.createElement('div');
@@ -1383,24 +505,16 @@
             particle.style.animationDuration = (10 + Math.random() * 10) + 's';
             particlesContainer.appendChild(particle);
         }
-
-        // Navigation scroll effect
+        
+        // 导航滚动效果
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
-
-        // Counter animation
+        
+        // 数字动画
         const counters = document.querySelectorAll('.stat-number[data-count]');
-        const observerOptions = {
-            threshold: 0.5
-        };
-
-        const counterObserver = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = entry.target;
@@ -1409,40 +523,19 @@
                     const increment = count / 60;
                     const timer = setInterval(() => {
                         current += increment;
-                        if (current >= count) {
-                            target.textContent = count.toLocaleString();
-                            clearInterval(timer);
-                        } else {
-                            target.textContent = Math.floor(current).toLocaleString();
-                        }
+                        target.textContent = (current >= count ? count : Math.floor(current)).toLocaleString();
+                        if (current >= count) clearInterval(timer);
                     }, 30);
-                    counterObserver.unobserve(target);
+                    observer.unobserve(target);
                 }
             });
-        }, observerOptions);
-
-        counters.forEach(counter => counterObserver.observe(counter));
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Parallax effect for hero
-        window.addEventListener('scroll', () => {
-            const hero = document.querySelector('.hero');
-            const scrolled = window.scrollY;
-            hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
-        });
+        }, { threshold: 0.5 });
+        counters.forEach(counter => observer.observe(counter));
+        
+        // 移动端菜单
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
     </script>
 </body>
 </html>
