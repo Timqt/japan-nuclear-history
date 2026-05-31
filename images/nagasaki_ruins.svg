@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect fill="#1a1a1a" width="800" height="500"/>
+  <!-- Building outlines -->
+  <rect x="100" y="200" width="60" height="200" fill="#0d0d0d" stroke="#333" stroke-width="2"/>
+  <rect x="180" y="150" width="80" height="250" fill="#0d0d0d" stroke="#333" stroke-width="2"/>
+  <rect x="280" y="180" width="50" height="220" fill="#0d0d0d" stroke="#333" stroke-width="2"/>
+  <rect x="500" y="160" width="70" height="240" fill="#0d0d0d" stroke="#333" stroke-width="2"/>
+  <rect x="600" y="190" width="100" height="210" fill="#0d0d0d" stroke="#333" stroke-width="2"/>
+  <!-- Rubble -->
+  <polygon points="50,400 100,350 150,400 200,360 250,400" fill="#0d0d0d"/>
+  <polygon points="350,420 420,380 490,420" fill="#0d0d0d"/>
+  <polygon points="550,400 620,350 700,400" fill="#0d0d0d"/>
+  <!-- Text -->
+  <text x="400" y="470" text-anchor="middle" fill="#666" font-size="14">长崎废墟 - Nagasaki Ruins</text>
+</svg>
