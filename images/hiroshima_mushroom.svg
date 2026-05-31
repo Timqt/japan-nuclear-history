@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="cloud" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#333;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#1a1a1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#000;stop-opacity:1"/>
+    </radialGradient>
+  </defs>
+  <rect fill="#0a0a0a" width="800" height="600"/>
+  <!-- Mushroom cloud -->
+  <ellipse cx="400" cy="200" rx="150" ry="100" fill="url(#cloud)"/>
+  <rect x="380" y="200" width="40" height="300" fill="url(#cloud)"/>
+  <ellipse cx="400" cy="500" rx="200" ry="50" fill="#111"/>
+  <!-- Text -->
+  <text x="400" y="580" text-anchor="middle" fill="#666" font-size="14">蘑菇云 - Mushroom Cloud</text>
+</svg>
